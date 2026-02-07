@@ -1,0 +1,215 @@
+.board-page-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/back_pattern.jpg');
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: auto; /* Permite scroll si el tablero es más grande */
+  width: 100%;
+  height: 100%;
+}
+
+.board-grid {
+  position: absolute; /* Posición absoluta para mayor control */
+  left: 0; /* Alineado al borde izquierdo */
+  width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+  display: block; /* Activa flexbox para organizar el contenido */
+  flex-direction: column; /* Organización vertical */
+  align-items: center; /* Centrado horizontal de los elementos internos */
+  justify-content: center; /* Centrado vertical de los elementos internos */
+  gap: 1px; /* Espaciado entre elementos */
+  overflow: auto; /* Permite desplazamiento si el contenido excede */
+  padding: 10px; /* Añade un margen interno */
+  margin-bottom: 20px; /* Margen adicional en la parte inferior */
+}
+
+.board-row {
+  display: inline-flex; /* Permite scroll horizontal */
+  gap: 10px;
+  white-space: nowrap; /* Evita el ajuste de las filas */
+}
+
+.board-cell {
+  width: 140px;
+  height: 150px;
+  background-color: lightblue;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  margin: 0;
+  margin-bottom: 1px;
+  object-fit: cover; /* Asegura que las imágenes dentro se ajusten correctamente */
+}
+
+.board-cell:hover {
+  background-color: darkblue;
+}
+.board-row:nth-child(odd) {
+  transform: translateX(75px); /* Ajusta este valor para alinear correctamente */
+}
+
+.player-list {
+  display: flex;
+  flex-wrap: nowrap; /* Mantiene los elementos en una sola fila */
+  gap: 10px;
+  position: absolute; /* Posiciona el contenedor de manera absoluta */
+  bottom: 20px; /* Ubica el contenedor cerca de la parte inferior */
+  left: 10;
+  right: 5%;
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.player-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #abd6a0;
+  width: 100px;
+  text-align: center;
+}
+
+.selected-ficha-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.selected-ficha {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.tile-image {
+  width: 140px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.water-tile {
+  background-image: url('frontend/public/loseta_mar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.turn-indicator {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 5px;
+}
+.turn-indicator2 {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.desove-arriba {
+  background-image: url('frontend/public/desovearriba.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desove-abajo {
+  background-image: url('frontend/public/desoveabajo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desove-izquierda {
+  background-image: url('frontend/public/desoveizq.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desove-derecha {
+  background-image: url('frontend/public/desovederecha.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tile-stack-image {
+  width: 140px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tile-stack-button {
+  width: 150px;
+  height: 50px;
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  text-align: center; 
+  line-height: 50px;
+  font-weight: bold; 
+}
+
+.tile-stack {
+  position: absolute; 
+  top: 0;
+  right: 0; 
+  width: 300px; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px; 
+  gap: 20px; 
+}
+
+
+.movimientos-window {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 250px;
+  max-height: 400px;
+  overflow-y: hidden;
+  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+  z-index: 1000;
+}
+
+.movimientos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.salmon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  width: 150px; 
+  height: 150px; 
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  margin: auto; 
+}
+
+.small-salmon {
+  width: 50px; 
+  height: 50px; 
+  object-fit: contain;
+}

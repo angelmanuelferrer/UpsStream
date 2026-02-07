@@ -1,0 +1,80 @@
+.home-page-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/home_upstream.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.matchList-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/logo_upstream.jpg');
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.hero-div{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 460px;
+}
+
+.hero-div h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2f324f;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-div h3{
+    text-align: center;
+}
+
+.matchList-page-container {
+    display: flex;
+    justify-content: center; /* Centra el contenedor horizontalmente */
+    align-items: center; /* Centra el contenedor verticalmente */
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+.match-list-box {
+    background-color: white; /* Fondo blanco para el recuadro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de elevación */
+    width: 80%; /* Ancho del recuadro */
+    max-width: 1500px; /* Ancho máximo del recuadro */
+}
+
+.custom-button {
+    background-color: darkblue;
+    border-color: darkblue;
+    color: white;
+    font-size: 1.25rem; /* Tamaño de fuente más grande */
+    padding: 0.5rem 1rem; /* Aumenta el padding para hacer el botón más grande */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
